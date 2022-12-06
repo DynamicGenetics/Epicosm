@@ -221,7 +221,11 @@ def timeline_harvest(db, working_collection):
 
     with open("user_details.json", "r") as infile:
         #~ load in the json of users
-        user_details = json.load(infile)
+        try: 
+            user_details = json.load(infile)
+        except ValueError:
+            print("There was a problem loading the 'user_details.json' file. Please check the JSON is valid.")
+
 
         total_users = (len(user_details))
         print(f"\nHarvesting timelines from {total_users} users...")
