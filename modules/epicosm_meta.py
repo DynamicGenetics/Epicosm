@@ -128,7 +128,7 @@ def check_env():
         sys.exit()
 
     #~ Check user list exists and get it
-    if not os.path.exists(env.run_folder + '/user_list'):
+    if not os.path.exists(env.run_folder + '/user_list.txt'):
         print(f"USAGE: please provide a list of users to follow, named 'user_list'. Stopping.")
         sys.exit()
 
