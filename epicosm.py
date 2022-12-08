@@ -74,7 +74,7 @@ def main():
 
     if args.stop or args.shutdown_db:
 
-        print(f"OK, stopping Epicosm processes.")
+        print("OK, stopping Epicosm processes.")
         subprocess.call(["pkill", "-15", "-f", "epicosm"])
 
         if args.shutdown_db:
@@ -93,7 +93,7 @@ def main():
                           env.db_log_filename,
                           env.epicosm_log_filename)
     if args.start_db:
-        print(f"OK, MongoDB started, but without Epicosm processes.")
+        print("OK, MongoDB started, but without Epicosm processes.")
         sys.exit(0)
 
     #~ set up logging (or not)
