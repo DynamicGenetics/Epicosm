@@ -108,7 +108,7 @@ Once you have a database with tweets, you can apply sentiment analysis to each d
 
 To run, choose from the following options:
 
-`--insert_groundtruth` Provide ground truth values (estimates of sentiment from a different source) in a file called 'groundtruth.csv' and add these to the local database
+`--insert_groundtruth` Provide ground truth values (estimates of sentiment from a different source) in a file called `groundtruth.csv` and add these to the local database
 
 `--liwc` Apply LIWC (Pennebaker et al 2015) analysis and append the results to the local database. You must have a LIWC dictionary (named “LIWC.dic”) in the directory you are running Epicosm in. LIWC has around 70 categories, including positive emotion (posemo) and negative emotion (negemo), but many of these will return no value because the short Tweets do not include words in these categories. Empty categories are not appended to the database.
 
