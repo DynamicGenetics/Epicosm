@@ -66,7 +66,7 @@ Epicosm uses [MongoDB](https://www.mongodb.com/) for data management, and you wi
 `python epicosm.py [your run flags]`
 
 Before running Epicosm, you must:
-1. Provide a list of user screen names in a file called `user_list` at the top level of the Epicosm directory. The user list must be a plain text file, with a single user name (twitter screen name) per line. You can start each name with the `@` symbol or not; Epicosm will recognise either.
+1. Provide a list of user screen names in a file called `user_list.txt` at the top level of the Epicosm directory. The user list must be a plain text file, with a single user name (twitter screen name) per line. You can start each name with the `@` symbol or not; Epicosm will recognise either.
 2. You will also need to supply Twitter API credentials by editing the `bearer_token.py` file in the top level of the Epicosm directory (there are further instructions inside the file). This needs to be your own bearer token from your Twitter developer account.
 3. Install MongoDB version 4 or higher. It does not need to be running when you start Epicosm: the script will check MongoDB's status, and start it if it is not already running. The working data base will be stored in Epicosm’s top level directory.
 4. Install Epicosm’s Python dependencies. They are listed in the  `requirements.txt` file, and these can be installed with a command such as
@@ -79,8 +79,8 @@ Before running Epicosm, you must:
 When running the harvester, you can use these options to tell Epicosm what to do:
 
 ```
-  --harvest      Harvest tweets from all user names in a file called user_list (with a single user per line)
-  --get_follows  Create a database of the users that are being followed by the accounts in your user_list. (This process can be very slow, especially if your users are each following a lot of accounts)
+  --harvest      Harvest tweets from all user names in a file called user_list.txt (with a single user per line)
+  --get_follows  Create a database of the users that are being followed by the accounts in your user_list.txt file. (This process can be very slow, especially if your users are each following a lot of accounts)
   --pseudofeed   Harvest recent tweets from accounts followed by those in your user_list. (This process can be very slow and take up a lot of storage, especially if your users are following a lot of accounts.)
   --repeat       Specify how often to repeat the harvest e.g. “—repeat 7” means repeat every seven days
   --refresh      If you have a new user_list, this will tell Epicosm to switch to this list
