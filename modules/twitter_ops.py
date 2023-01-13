@@ -113,7 +113,7 @@ def user_lookup():
             connect_to_endpoint()
     """
 
-    with open("user_list", "r") as infile: #~ clean up user_list
+    with open("user_list.txt", "r") as infile: #~ clean up user_list
         users = [x.strip() for x in infile.readlines()]  #~ whitespace strip
         users = [x for x in users if x != ""]            #~ empty line removal
         users = [(re.sub(r"^@", r"", x)) for x in users] #~ clean "@s" on twitter handles
